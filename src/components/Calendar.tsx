@@ -31,7 +31,6 @@ export default function Calendar() {
   const [endDate, setEndDate] = useState<Date | null>(null);
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [currentDate, setCurrentDate] = useState<Date>(new Date());
-const [hoveredWeek, setHoveredWeek] = useState<number | null>(null);
   const days = generateCalendar(currentDate);
 
   const handleClick = (day: Date) => {
@@ -79,7 +78,6 @@ const themeColors = [
   "#C34A36", "#FF8066", "#D65DB1", "#2C73D2"
 ];
 
-const themeColor = themeColors[month];
     
 return (
   <div className="calendar-container">
@@ -115,7 +113,6 @@ return (
 const dateKey = format(day, "yyyy-MM-dd");
 const emoji = specialDates[dateKey];
 const today = isToday(day);
-const weekIndex = Math.floor(i / 7);
 const isStart =
   isRangeMode && startDate && isSameDay(day, startDate);
 
