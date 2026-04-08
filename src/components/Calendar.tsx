@@ -63,7 +63,6 @@ export default function Calendar() {
   setStartDate(day);
   setEndDate(null);
 };
-const month = currentDate.getMonth();
 const handleToggleRange = () => {
   if (isRangeMode) {
     // Turning OFF → clear everything
@@ -72,11 +71,7 @@ const handleToggleRange = () => {
   }
   setIsRangeMode(!isRangeMode);
 };
-const themeColors = [
-  "#FF6B6B", "#6BCB77", "#4D96FF", "#FFD93D",
-  "#845EC2", "#00C9A7", "#FF9671", "#0081CF",
-  "#C34A36", "#FF8066", "#D65DB1", "#2C73D2"
-];
+
 
     
 return (
@@ -114,10 +109,10 @@ const dateKey = format(day, "yyyy-MM-dd");
 const emoji = specialDates[dateKey];
 const today = isToday(day);
 const isStart =
-  isRangeMode && startDate && isSameDay(day, startDate);
+  !!(isRangeMode && startDate && isSameDay(day, startDate));
 
 const isEnd =
-  isRangeMode && endDate && isSameDay(day, endDate);
+  !!(isRangeMode && endDate && isSameDay(day, endDate));
         if (startDate && endDate) {
           const start = startDate < endDate ? startDate : endDate;
           const end = startDate > endDate ? startDate : endDate;
