@@ -1,75 +1,138 @@
-# React + TypeScript + Vite
+# 📅 Interactive Wall Calendar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive calendar web application built with **React + TypeScript + Vite**, designed to mimic a real-world wall calendar with enhanced UX features.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+https://calen-sandy.vercel.app/
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## ✨ Features
 
-## Expanding the ESLint configuration
+### 📆 Calendar UI
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Wall-mounted calendar design with pin effect
+* Fully responsive layout (desktop + mobile) rotative nature
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🎯 Date Selection
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Single date selection
+* Toggle-based **range selection mode**
+* Start (S) and End (E) indicators for selected range
+* Smooth range highlighting
+
+### 🧠 Smart UX Enhancements
+
+* Edge-based navigation arrows
+
+### 📝 Notes System
+
+* Add notes for any selected date
+* Notes persist using **localStorage**
+* Clean card-based UI
+
+### 🎨 Visual Enhancements
+
+* Colored weekdays ( highlighted)
+* Emojis on special dates 🎉❤️🎄
+* Hover animations and smooth transitions
+* Dynamic theme color based on month
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** React + TypeScript
+* **Build Tool:** Vite
+* **Date Handling:** date-fns
+* **Styling:** CSS (custom design)
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+│── components/
+│   ├── Calendar.tsx
+│   ├── Day.tsx
+│   ├── Notes.tsx
+│
+│── styles/
+│   ├── global.css
+│
+│── utils/
+│   ├── dateUtils.ts
+│
+│── App.tsx
+│── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Installation & Setup
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clone the repository
+git clone https://github.com/Rishitha-2106/calendar-app.git
+
+# Navigate into project
+cd calendar-app
+
+# Install dependencies
+npm install
+
+# Run locally
+npm run dev
 ```
+
+---
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 🚀 Deployment
+
+Deployed using **Vercel**
+
+* Build Command: `npm run build`
+* Output Directory: `dist`
+
+---
+
+## 💡 Key Highlights
+
+* Clean component architecture
+* Strong TypeScript usage
+* UX-focused design decisions
+* Real-world product thinking
+
+---
+
+## 🎯 Future Improvements
+
+* API-based holiday integration
+* Drag & drop event system
+* Dark mode toggle
+* Animations between month transitions
+
+---
+
+## 👩‍💻 Author
+
+
+Rishitha
+---
+
+
+
+---
